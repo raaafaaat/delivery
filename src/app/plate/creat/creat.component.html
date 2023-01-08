@@ -12,7 +12,23 @@
       <div class="mb-3">
         <label for="txtImage" class="form-label">Image</label>
         <input type="text" name="Image" [(ngModel)] = "PlateForm.image" class="form-control" id="txtImage" />
-      </div>                  
+      </div>      
+      <!--div class="mb-3">
+        <label for="txtrestaurant" class="form-label">restaurant</label>
+        <input type="text" name="restaurant" [(ngModel)] = "PlateForm.restaurant.id" class="form-control" id="txtrestaurant" />
+      </div-->     
+      
+      
+      <div class="mb-3">
+        <label class="form-label" for="field_restaurant">Restaurant</label>
+        <select class="form-control" name="restaurant" [(ngModel)] = "PlateForm.restaurant.id" id="field_restaurant" >
+          <option [ngValue]="null"></option>
+          <option *ngFor="let r of allRestaurant" [value]="r.id">{{ r.name }}</option>
+        </select>
+      </div>
+
+
+      
       <button type="button" (click)="create()" class="btn btn-primary">Create</button>
     </form>
   </div>

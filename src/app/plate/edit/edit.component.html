@@ -12,7 +12,11 @@
         <div class="mb-3">
           <label for="txtImage" class="form-label">Image</label>
           <input type="text" name="Image" [(ngModel)] = "PlateForm.image" class="form-control" id="txtImage" />
-        </div>                  
+        </div>  
+        <div class="mb-3">
+          <label for="txtrestaurant" class="form-label">restaurant</label>
+          <input type="text" name="restaurant" [(ngModel)] = "PlateForm.restaurant.id" class="form-control" id="txtrestaurant" />
+        </div>                           
         <button type="button" (click)="update()" class="btn btn-primary">save</button>
       </form>
   </div>

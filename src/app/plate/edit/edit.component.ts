@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Restaurant } from 'src/app/restaurants/restaurant';
 import { Plate } from '../plate';
 import { PlateService } from '../plate.service';
 
@@ -9,11 +10,20 @@ import { PlateService } from '../plate.service';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
+  r: Restaurant = {
+    id: 0,
+    name: '',
+    address: '',
+    phone: '',
+    image: ''
+  };
+  
   PlateForm: Plate = {
     id: 0,
     name: '',
     cooktime: '',
-      image: ''
+      image: '',
+      restaurant: this.r
   };
   constructor(
     private route: ActivatedRoute,
