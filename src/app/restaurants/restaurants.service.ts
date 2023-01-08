@@ -22,7 +22,7 @@ export class RestaurantsService {
    }
     
    update(payload:Restaurant){
-    return this.http.put(`http://localhost/:8080/Restaurant`,payload);
+    return this.http.put(`http://localhost:8080/Restaurant`,payload);
    }
 
    delete(id:number){
