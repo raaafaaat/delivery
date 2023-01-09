@@ -15,7 +15,7 @@ const routes: Routes = [
     component: CreatComponent,
   },
   {
-    path: 'plate/edite',
+    path: 'plate/edit/:id',
     component: EditComponent,
   },
 ];
